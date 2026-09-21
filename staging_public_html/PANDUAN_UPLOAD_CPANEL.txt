@@ -1,0 +1,45 @@
+========================================================================
+   SIMADU - SISTEM ADMINISTRASI PEMBELAJARAN MADRASAH TERPADU
+   Kreatif by Witno (witno70@gmail.com)
+   MIN 1 KOTAWARINGIN TIMUR - KALIMANTAN TENGAH
+========================================================================
+
+PETUNJUK CEPAT UNGGAH KE CPANEL FILE MANAGER (public_html):
+
+1. LOGIN CPANEL:
+   - Masuk ke akun cPanel hosting Anda (misal: https://namadomain.sch.id:2083).
+
+2. BUAT DATABASE MySQL:
+   - Di cPanel, buka menu "MySQL Databases".
+   - Buat nama database baru (misal: u12345_simadu).
+   - Buat user database baru beserta password yang aman.
+   - Hubungkan user ke database tersebut dan centang "ALL PRIVILEGES".
+
+3. IMPORT DATABASE:
+   - Buka menu "phpMyAdmin" di cPanel.
+   - Klik database yang baru dibuat di panel kiri.
+   - Klik tab "Import", pilih file "simadu_database_min1kotim.sql", lalu klik "Go / Kirim".
+   - Seluruh tabel, profil MIN 1 Kotim, kaldik, guru, mapel, prota, promes, dan jadwal akan terimport otomatis.
+
+4. UNGGAH FILE KE FILE MANAGER:
+   - Buka menu "File Manager" di cPanel.
+   - Masuk ke folder "public_html" (atau folder subdomain Anda).
+   - Pastikan folder bersih dari file lama (jika baru).
+   - Klik tombol "Upload" di menu atas cPanel File Manager.
+   - Pilih file "simadu_public_html.zip".
+   - Setelah upload selesai (indikator hijau 100%), kembali ke File Manager.
+   - Klik kanan pada file "simadu_public_html.zip" -> Pilih "Extract" -> Ekstrak langsung ke "/public_html".
+
+5. KONFIGURASI KONEKSI DATABASE:
+   - Di File Manager, masuk ke folder "config".
+   - Klik kanan pada file "database.php" -> Pilih "Edit".
+   - Sesuaikan konfigurasi berikut:
+       $this->db_name  = 'u12345_simadu';        // Ganti dengan nama database Anda
+       $this->username = 'u12345_simaduuser';    // Ganti dengan user database Anda
+       $this->password = 'PasswordRahasiaAnda';  // Ganti dengan password database Anda
+   - Klik "Save Changes".
+
+6. SELESAI & UJI COBA:
+   - Buka domain madrasah Anda di browser (misal: https://simadu.min1kotim.sch.id).
+   - SIMADU siap digunakan oleh Kepala Madrasah, Guru, dan Staf Administrasi!
+========================================================================

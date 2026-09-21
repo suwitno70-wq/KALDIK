@@ -1,0 +1,6 @@
+{
+  "name": "SIMADU - Sistem Administrasi Pembelajaran Madrasah Terpadu",
+  "description": "Aplikasi Administrasi Pembelajaran Madrasah Terpadu (Prota, Promes, Kaldik, Minggu Efektif, Jadwal Pelajaran, Rekap Mingguan, dan Validasi Konflik) untuk MIN 1 Kotawaringin Timur. Kreatif by Witno.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
